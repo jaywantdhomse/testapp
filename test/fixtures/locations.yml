@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mindate: 2016-08-08 23:59:57
+  maxdate: 2016-08-08 23:59:57
+  name: MyString
+  data_coverage: MyString
+  d_id: MyString
+
+two:
+  mindate: 2016-08-08 23:59:57
+  maxdate: 2016-08-08 23:59:57
+  name: MyString
+  data_coverage: MyString
+  d_id: MyString

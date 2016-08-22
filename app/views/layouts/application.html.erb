@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestApp</title>
+  <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %> 
+  <%= csrf_meta_tags %>
+</head>
+<div class="container-narrow">
+  <div class="masthead">
+    <%= render 'layouts/user_header' %>
+    <h3 class="muted"><%= link_to "TestApp", root_path %></h3>
+    <h5 class="muted">A demo of using Climate Data Online with Devise</h5>
+  </div>
+ 
+    	<% if user_signed_in? %>
+     <hr />
+                <div style="text-align: center">
+	  		<div id="home" class="btn btn-primary"><a <%= link_to "Datasets", datasets_path %></a></div>
+	  		<div id="home" class="btn btn-primary"><a <%= link_to "Data Categories", data_categories_path %></a></div>
+	  		<div id="home" class="btn btn-primary"><a <%= link_to "Data Types", datatypes_path %></a></div>
+	  		<div id="home" class="btn btn-primary"><a <%= link_to "Location Categories", location_categories_path %></a></div>
+	  		<div id="home" class="btn btn-primary"><a <%= link_to "Locations", locations_path %></a></div>
+	  	</div>
+     <hr />
+  	<% end %>
+  
+  <%= yield %>
+</div>
+</html>

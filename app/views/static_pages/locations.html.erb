@@ -1,0 +1,27 @@
+<div class="jumbotron">
+  <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+      <thead>
+          <tr>
+              <th>id</th>
+              <th>name</th>
+              <th>mindate</th>
+              <th>maxdate</th>
+          </tr>
+      </thead>
+      <tbody>
+          <% @locations.each do |location| %>
+            <tr>
+                <td><%= location.d_id %></td>
+                <td><%= location.name %></td>
+                <td><%= location.mindate %></td>
+                <td><%= location.maxdate %></td>
+            </tr>
+          <% end %>
+      </tbody>
+  </table>
+</div>
+<script type="text/javascript">
+  $(document).on('ready page:load', function () {
+      $('#example').DataTable();
+  } );
+</script>
