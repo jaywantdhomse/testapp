@@ -12,15 +12,15 @@ default: &default
 
 development:
   <<: *default
-  host: 166.70.118.76
-  username: xtractly
-  password: m@rk3tch3ck
-  database: test_app
+  host: localhost
+  username: root
+  password: root
+  database: testapp
  
 
 production:
   <<: *default
-  host: 166.70.118.76
-  username: xtractly
-  password: m@rk3tch3ck
-  database: test_app
+  host: localhost
+  username: root
+  password: root
+  database: testapp
